@@ -3,5 +3,16 @@
 
 // but you're not, so you'll write it from scratch:
 var parseJSON = function(json) {
-  // your code goes here
+  if (!isNaN(json)) {
+    return Number(json);
+  }
+  if (json.includes('true')) {
+    return Boolean(1);
+  }
+  if (json.includes('false')) {
+    return Boolean(0);  
+  }
+  // if (typeof json === 'string') {
+  //   return json.slice(1, -1);
+  // }
 };
